@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "lint": "lint-staged",
+    "prepare": "husky"
+  },
+      "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
+  }
+}
