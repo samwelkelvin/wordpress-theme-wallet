@@ -1,0 +1,4 @@
+node_modules
+tools/php-cs-fixer/vendor
+.git
+lint-staged.config.js
