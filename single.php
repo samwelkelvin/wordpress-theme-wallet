@@ -5,7 +5,6 @@
  */
 try {
 	get_header();
-
 	$args = array();
 
 	if (have_posts()) {
