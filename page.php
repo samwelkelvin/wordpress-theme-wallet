@@ -1,68 +1,55 @@
 <?php
 /**
- * 
- * Loads static page like contact,homepage,landing page etc
- * 
- * 
+ * Loads static page like contact,homepage,landing page etc.
  */
+get_header();
 
- get_header();
+if (is_front_page()) {
+	echo '<div class="container">';
 
- if(is_front_page()){
-  
-  echo '<div class="container">';
-  
-        if (have_posts()):
-            while (have_posts()) : the_post();
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
 
-                the_content();
+			the_content();
+		}
+	} else {
+		echo '<h3>No Page data </h3>';
+	}
+	echo '</div>';
 
-            endwhile;
-        else:
-            echo '<h3>No Page data </h3>';
-        endif;
-  echo '</div>';
+	// get_template_part('template-parts/content', 'front-page');
+} elseif (is_home()) {
+	echo '<div class="container">';
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
 
+			the_content();
+		}
+	} else {
+		echo '<h3>No Page data </h3>';
+	}
+	echo '</div>';
 
-  //get_template_part('template-parts/content', 'front-page');
+	// get_template_part('template-parts/content', 'front-page');
+} else {
+	// get_template_part('template-parts/content', 'page');
+	echo '<div class="container">';
 
-} elseif(is_home()){
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
 
-  echo '<div class="container">';
-    if (have_posts()):
-      while (have_posts()) : the_post();
+			the_content();
+		}
+	} else {
+		echo '<h3>No Page data </h3>';
+	}
+	echo '</div>';
+}
 
-        the_content();
-
-      endwhile;
-    else:
-      echo '<h3>No Page data </h3>';
-    endif;
-  echo '</div>';
-
-  //get_template_part('template-parts/content', 'front-page');
-
- } else {
-
-  //get_template_part('template-parts/content', 'page');
-  echo '<div class="container">';
-
-  if (have_posts()):
-    while (have_posts()) : the_post();
-
-      the_content();
-
-    endwhile;
-  else:
-    echo '<h3>No Page data </h3>';
-  endif;
-  echo '</div>';
-
- }
-
-
- 
- ?>
+?>
 
  <?php
- get_footer();
+get_footer();
