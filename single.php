@@ -10,7 +10,7 @@ try {
 	if (have_posts()) {
 		while (have_posts()) {
 			the_post();
-
+			echo 1;
 			get_template_part('template-parts/content/single', 'post', $args);
 		}
 	} else {
