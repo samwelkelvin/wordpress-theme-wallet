@@ -5,10 +5,10 @@
 
 ## Screenshots
 ### Home Page
-- [Home Page](https://github.com/samwelkelvin/wordpress-theme-wallet/wallet/screenshots/home.png?raw=true)
+- [Home Page](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/home.png?raw=true)
 ### Blog
-- [Blog](https://github.com/samwelkelvin/wordpress-theme-wallet/wallet/screenshots/blog.png?raw=true)
+- [Blog](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/blog.png?raw=true)
 ### Single post
-- [Single post](https://github.com/samwelkelvin/wordpress-theme-wallet/wallet/screenshots/single-blog.png?raw=true)
+- [Single post](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/single-blog.png?raw=true)
 ### FAQs
-- [FAQs](https://github.com/samwelkelvin/wordpress-theme-wallet/wallet/screenshots/faqs.png?raw=true)
+- [FAQs](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/faqs.png?raw=true)
