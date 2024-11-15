@@ -11,4 +11,4 @@
 ### Single post
 - [Single post](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/single-blog.png?raw=true)
 ### FAQs
-- [FAQs](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/faqs.png?raw=true)
+- [FAQs](https://github.com/user-attachments/assets/fdb1e04d-79cc-4eb6-9ac8-c9ea9b230f7d)
