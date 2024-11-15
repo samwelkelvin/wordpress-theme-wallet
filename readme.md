@@ -12,4 +12,4 @@
 - [Single post](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/single-blog.png?raw=true)
 ### FAQs
 - [FAQs](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/faqs.png?raw=true)
-![FAQs](https://github.com/samwelkelvin/Ello-engineering-challenge/assets/51368370/70ad70b1-a12f-47d3-8f28-8a2ffcbbedb2)
+![FAQs](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/faqs.png?raw=true)
