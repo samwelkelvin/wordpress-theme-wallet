@@ -1,4 +1,6 @@
 {
+    "description": "Wordpress theme",
+    "license": "MIT",
     "scripts": {
 
         "cs-fix" : "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php",
