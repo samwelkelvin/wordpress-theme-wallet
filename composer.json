@@ -1,7 +1,7 @@
 {
     "scripts": {
 
-        "cs-fix" : "vendor/bin/php-cs-fixer fix",
+        "cs-fix" : "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php",
 
         "cs-check" : "vendor/bin/php-cs-fixer check",
 
