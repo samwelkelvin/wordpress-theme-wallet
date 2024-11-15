@@ -1,0 +1,26 @@
+{
+    "scripts": {
+
+        "cs-fix" : "vendor/bin/php-cs-fixer fix",
+
+        "cs-check" : "vendor/bin/php-cs-fixer check",
+
+        "cs-test" : "vendor/bin/php-cs-fixer fix --dry-run",
+
+        "run-psalm"  : "vendor/bin/psalm",
+
+        "psalm-dead-code"  : "vendor/bin/psalm --find-dead-code=always",
+
+        "psalm-unused-code"  : "vendor/bin/psalm  --find-unused-code=always --show-info=true",
+
+        "psalm-run-all"  : "run-psalm psalm-dead-code && psalm-unused-code"
+      
+    },
+
+    "require-dev": {
+
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "vimeo/psalm": "^5.26",
+        "humanmade/psalm-plugin-wordpress": "^3.1"
+    }
+}

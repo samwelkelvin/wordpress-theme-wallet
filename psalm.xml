@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="4"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    findUnusedBaselineEntry="true"
+    findUnusedCode="true"
+    autoloader="psalm/bootstrap.php" 
+>
+    <projectFiles>
+        <file name="404.php"/>
+        <file name="archive.php"/>
+        <file name="author.php"/>
+        <file name="category.php"/>
+        <file name="footer.php"/>
+        <file name="functions.php"/>
+        <file name="header.php"/>
+        <file name="home.php"/>
+        <file name="index.php"/>
+        <file name="page.php"/>
+        <file name="search.php"/>
+        <file name="single.php"/>
+        <file name="tag.php"/>
+        <file name="inc/aurthors-social-accounts.php"/>
+        <file name="inc/class-wp-bootstrap-navwalker-footer.php"/>
+        <file name="inc/class-wp-bootstrap-navwalker.php"/>
+        <file name="inc/config.php"/>
+        <file name="inc/create-widgets-area.php"/>
+        <file name="inc/customizer.php"/>
+        <file name="inc/scripts.php"/>
+        <file name="patterns/2-columns.php"/>
+        <file name="patterns/3-columns.php"/>
+        <file name="patterns/about.php"/>
+        <file name="patterns/banner.php"/>
+        <file name="patterns/contact.php"/>
+        <file name="patterns/faqs.php"/>
+        <file name="patterns/featured1.php"/>
+        <file name="patterns/featured2.php"/>
+        <file name="patterns/hero.php"/>
+        <file name="patterns/services.php"/>
+        <file name="patterns/tabs.php"/>
+        <file name="patterns/team.php"/>
+        <file name="template/full-page.php"/>
+        <file name="vendor/autoload.php"/>
+        <file name="classes/widgets/Categories.php"/>
+        <file name="classes/widgets/Recent-post.php"/>
+        <file name="classes/widgets/register-widgets.php"/>
+        <file name="classes/widgets/Tags.php"/>
+        <file name="inc/patterns/register-patterns.php"/>
+        <file name="template-parts/content/grid-posts-template.php"/>
+        <file name="template-parts/content/list-posts-template.php"/>
+        <file name="template-parts/content/single-post.php"/>
+        <file name="template-parts/header/navigation.php"/>
+        <file name="template-parts/sidebar/blog-page.php"/>
+        <file name="template-parts/social/social-medial.php"/>
+        <file name="vendor/composer/autoload_classmap.php"/>
+        <file name="vendor/composer/autoload_files.php"/>
+        <file name="vendor/composer/autoload_namespaces.php"/>
+        <file name="vendor/composer/autoload_psr4.php"/>
+        <file name="vendor/composer/autoload_real.php"/>
+        <file name="vendor/composer/autoload_static.php"/>
+        <file name="vendor/composer/ClassLoader.php"/>
+        <file name="vendor/composer/installed.php"/>
+        <file name="vendor/composer/InstalledVersions.php"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+        </ignoreFiles>
+    </projectFiles>
+   <plugins>
+		<pluginClass class="PsalmWordPress\Plugin" />
+	</plugins>
+
+</psalm>
