@@ -8,3 +8,4 @@ psalm
 .php-cs-fixer_1.php
 .php-cs-fixer_2.php
 .php-cs-fixer.cache
+composer.lock
