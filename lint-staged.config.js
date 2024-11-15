@@ -1,5 +1,5 @@
 module.exports = {
   "**/*.{css,js}": ["prettier --write"],
 
-  "**/*.php": ["composer cs-fix"],
+  "**/*.php": ["composer update && composer cs-fix"],
 };
