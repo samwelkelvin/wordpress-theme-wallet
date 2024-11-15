@@ -1,5 +1,6 @@
 {
-    "description": "Wordpress theme",
+    "name": "wordpress/wallet-theme",
+    "description": "Wordpress theme made with bootstrap 4",
     "license": "MIT",
     "scripts": {
 
