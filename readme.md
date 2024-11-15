@@ -5,7 +5,7 @@
 
 ## Screenshots
 ### Home Page
-- [Home Page](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/home.png?raw=true)
+- [Home Page](https://raw.githubusercontent.com/samwelkelvin/wordpress-theme-wallet/refs/heads/main/screenshots/home.png)
 ### Blog
 - [Blog](https://github.com/samwelkelvin/wordpress-theme-wallet/blob/main/screenshots/blog.png?raw=true)
 ### Single post
