@@ -2,7 +2,7 @@
 /**
  * Title: 3 columns
  * Slug: wallet/3-columns
- * Categories: columns
+ * Categories: columns.
  */
 ?>
 <section class="section-sm bg-primary-light">

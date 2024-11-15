@@ -1,12 +1,8 @@
 <?php
 
 /**
- * 
- * Didplays  posts based on aurthor
- * 
+ * Didplays  posts based on aurthor.
  */
-
-
 ?>
 <style>
     .author {
@@ -21,10 +17,9 @@
 <?php
 
 try {
+	get_header();
 
-    get_header();
-
-?>
+	?>
 
 
     <div class="container py-4">
@@ -35,16 +30,16 @@ try {
 
             </div>
             <div class="col-md-8 col-lg-6 text-center text-md-left">
-                <h3 class="mb-2"><?php the_author() ?></h3>
+                <h3 class="mb-2"><?php the_author(); ?></h3>
                 <div class="content mb-4">
-                    <?php echo get_the_author_meta('user_description') ?>
+                    <?php echo get_the_author_meta('user_description'); ?>
                 </div>
 
                 <a class="post-count mb-1" href="#"><i class="ti-pencil-alt mr-2"></i>
                     <span class="text-primary"><b> <?php echo get_the_author_posts(); ?> </b>
                     </span> Posts by this author</a>
 
-                <?php  echo reader_get_user_social_links(); ?>
+                <?php echo reader_get_user_social_links(); ?>
 
             </div>
         </div>
@@ -54,30 +49,26 @@ try {
     <div class="container">
 
         <h3 class="h3 mb-4  py-3">
-            Posts by : <mark> <?php echo esc_html(get_the_author()) ?></mark>
+            Posts by : <mark> <?php echo esc_html(get_the_author()); ?></mark>
         </h3>
     </div>
 
     <?php
 
-    $args = [];
+		$args = array();
 
-    //if blog layout is list or not set use list
-    if (!get_theme_mod('blog-layout') || get_theme_mod('blog-layout') === 'list')
+	// if blog layout is list or not set use list
+	if (!get_theme_mod('blog-layout') || 'list' === get_theme_mod('blog-layout')) {
+		get_template_part('template-parts/content/list', 'posts-template', $args);
+	} else {
+		get_template_part('template-parts/content/grid', 'posts-template', $args);
+	}
 
-        get_template_part('template-parts/content/list', 'posts-template', $args);
-
-    else
-
-        get_template_part('template-parts/content/grid', 'posts-template', $args);
-
-
-    ?>
+	?>
 
 <?php
 
-    get_footer();
-} catch (\Throwable $th) {
-
-    echo $th->getMessage();
+	get_footer();
+} catch (Throwable $th) {
+	echo $th->getMessage();
 }

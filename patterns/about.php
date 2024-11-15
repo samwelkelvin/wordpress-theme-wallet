@@ -2,7 +2,7 @@
 /**
  * Title: About
  * Slug: wallet/about
- * Categories: about
+ * Categories: about.
  */
 ?>
 <section class="about-section section bg-tertiary position-relative overflow-hidden">

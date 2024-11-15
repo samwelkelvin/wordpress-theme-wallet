@@ -1,39 +1,47 @@
- * {
-    word-break: break-all;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
+* {
+  word-break: break-all;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .page-numbers {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    border-radius: 8px;
-    background: transparent;
-    text-align: center;
-    padding: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #51B56D;
-    color: #51B56D;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 8px;
+  background: transparent;
+  text-align: center;
+  padding: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #51b56d;
+  color: #51b56d;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 span:not(:first-child) .page-numbers {
-    margin-left: -1px;
+  margin-left: -1px;
 }
 
 .page-numbers.current {
-    background-color: #51B56D;
-    color: #fff;
+  background-color: #51b56d;
+  color: #fff;
 }
 
-
-.dynamic_widget  li a{
-    color: black;
+.dynamic_widget li a {
+  color: black;
 }
 
-.dynamic_widget  li a:hover{
-    color: #51B56D;
+.dynamic_widget li a:hover {
+  color: #51b56d;
+}
+
+.card-meta-author img {
+  border-radius: 50%;
+  width: 35px;
 }

@@ -2,7 +2,7 @@
 /**
  * Title: Page banner
  * Slug: wallet/banner
- * Categories: banner
+ * Categories: banner.
  */
 ?>
 

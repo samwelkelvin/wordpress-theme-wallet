@@ -11,20 +11,19 @@
             <a class="navbar-brand" href="/">
                 <?php
 
-                if (function_exists("the_custom_logo")) {
+				if (function_exists('the_custom_logo')) {
+					$logo_id = get_theme_mod('custom_logo');
 
-                    $logo_id = get_theme_mod("custom_logo");
+					$logo = wp_get_attachment_image_src($logo_id);
 
-                    $logo = wp_get_attachment_image_src($logo_id);
-
-                    if ($logo)
-                        echo '<img loading="prelaod" decoding="async" class="img-fluid" width="150px" src="' . $logo[0] . '" alt="Logo">';
-                    else
-                        echo 'Logo';
-                } else {
-
-                    echo 'Logo';
-                }
+					if ($logo) {
+						echo '<img loading="prelaod" decoding="async" class="img-fluid" width="150px" src="' . $logo[0] . '" alt="Logo">';
+					} else {
+						echo 'Logo';
+					}
+				} else {
+					echo 'Logo';
+				}
 
                 ?>
                 </a>
@@ -35,24 +34,24 @@
                 <?php
 
                 $defaults = array(
-                    'menu'                 => '',
-                    'container'            => 'div',
-                    'container_class'      => 'collapse navbar-collapse text-center order-lg-2 order-3',
-                    'container_id'         => 'navigation',
-                    'container_aria_label' => '',
-                    'menu_class'           => 'navbar-nav mx-auto',
-                    'menu_id'              => '',
-                    'echo'                 => true,
-                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                    'before'               => '',
-                    'after'                => '',
-                    'link_before'          => '',
-                    'link_after'           => '',
-                    'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    // 'item_spacing'         => 'preserve',
-                    'depth'                => 2,
-                    'walker'               => new WP_Bootstrap_Navwalker(),
-                    'theme_location'       => 'primary',
+                	'menu' => '',
+                	'container' => 'div',
+                	'container_class' => 'collapse navbar-collapse text-center order-lg-2 order-3',
+                	'container_id' => 'navigation',
+                	'container_aria_label' => '',
+                	'menu_class' => 'navbar-nav mx-auto',
+                	'menu_id' => '',
+                	'echo' => true,
+                	'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                	'before' => '',
+                	'after' => '',
+                	'link_before' => '',
+                	'link_after' => '',
+                	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                	// 'item_spacing'         => 'preserve',
+                	'depth' => 2,
+                	'walker' => new WP_Bootstrap_Navwalker(),
+                	'theme_location' => 'primary',
                 );
 
                 wp_nav_menu($defaults);

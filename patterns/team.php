@@ -2,7 +2,7 @@
 /**
  * Title: Our team
  * Slug: wallet/team
- * Categories: team
+ * Categories: team.
  */
 ?>
 <section class="section teams">

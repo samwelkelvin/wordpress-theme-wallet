@@ -2,7 +2,7 @@
 /**
  * Title: Services
  * Slug: wallet/services
- * Categories: banner
+ * Categories: banner.
  */
 ?>
 <section class="section">

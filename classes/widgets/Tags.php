@@ -2,59 +2,46 @@
 
 class Wallet_Tags extends WP_Widget
 {
+	/**
+	 * Register widget with wordpress.
+	 */
+	public function __construct()
+	{
+		parent::__construct(
+			// base id
+			'wallet_tags_widget',
 
-    /**
-     * 
-     * Register widget with wordpress
-     * 
-     */
+			// Name
+			__('Reader Tags Widget', 'reader'),
 
-    public function __construct()
-    {
-        parent::__construct(
-            //base id
-            "wallet_tags_widget",
+			// description array);
+			array('description' => __('Display tags in a widget', 'reader')),
+		);
+	}
 
-            //Name
-            __("Reader Tags Widget", "reader"),
+	// Front end display
 
-            //description array);
-            array("description" => __("Display tags in a widget", "reader")),
-        );
-    }
+	public function widget($args, $instance)
+	{
+		$this->getTags();
+	}
 
+	/*
+	 *
+	 * Widget backend
+	 *
+	 * $instance previously  saved values in database
+	 *
+	 */
 
-    /****
-     * 
-     * Front end display
-     *
-     */
-
-    public  function widget($args, $instance)
-    {
-        $this->getTags();
-    }
-
-
-    /***
-     * 
-     * Widget backend
-     * 
-     * $instance previously  saved values in database
-     * 
-     */
-
-    public function form($instance)
-    {
-
-        if (isset($instance['title'])) {
-
-            $title = $instance['title'];
-        } else {
-
-            $title = __('Tags', 'reader_domain');
-        }
-?>
+	public function form($instance)
+	{
+		if (isset($instance['title'])) {
+			$title = $instance['title'];
+		} else {
+			$title = __('Tags', 'reader_domain');
+		}
+		?>
 
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
@@ -63,38 +50,31 @@ class Wallet_Tags extends WP_Widget
         </p>
 
     <?php
-    }
+	}
 
+	/*
+	 *
+	 * sanitize widget form values as they are being saved
+	 *
+	 * refreshes widget every time its updated
+	 */
 
-    /***
-     * 
-     * sanitize widget form values as they are being saved 
-     *
-     * refreshes widget every time its updated
-     */
+	public function update($new_instance, $old_instance)
+	{
+		$instance = array();
+		$instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
 
-    public function update($new_instance, $old_instance)
-    {
-        $instance = array();
-        $instance['title'] = (! empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-        return $instance;
-    }
+		return $instance;
+	}
 
+	/**
+	 * User functions.
+	 */
 
-
-    /**
-     * 
-     * 
-     * User functions
-     * 
-     * 
-     */
-
-    //post tags
-    private function getTags()
-    {
-
-    ?>
+	// post tags
+	private function getTags()
+	{
+		?>
 
         <div class="widget widget-tags">
             <h4 class="widget-title"><span>Tags</span></h4>
@@ -102,34 +82,28 @@ class Wallet_Tags extends WP_Widget
            
                 <?php
 
-                $tags = get_tags(array('get' => 'all'));
+					$tags = get_tags(array('get' => 'all'));
 
-                if ($tags) {
+		if ($tags) {
+			foreach ($tags as $tag) {
+				echo '<li  class="list-inline-item"><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></li>';
+			}
+		} else {
+			_e('No tags created.', 'text-domain');
+		}
 
-                    foreach ($tags as $tag):
-
-                        echo '<li  class="list-inline-item"><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></li>';
-
-                    endforeach;
-                } else {
-
-                    _e('No tags created.', 'text-domain');
-                }
-
-                ?>
+		?>
 
             </ul>
         </div>
 
 <?php
-    }
+	}
 }
 
-
-
-//registering the  widgets
+// registering the  widgets
 function register_wallet_tags_widget()
 {
-    register_widget('Wallet_Tags');
+	register_widget('Wallet_Tags');
 }
 add_action('widgets_init', 'register_wallet_tags_widget');

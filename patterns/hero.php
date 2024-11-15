@@ -2,7 +2,7 @@
 /**
  * Title: Hero
  * Slug: wallet/hero
- * Categories: featured
+ * Categories: featured.
  */
 ?>
 <!-- wp:cover {"overlayColor":"contrast","isUserOverlayColor":true,"align":"full"} -->

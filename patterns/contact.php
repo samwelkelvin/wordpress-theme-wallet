@@ -2,7 +2,7 @@
 /**
  * Title: Contact
  * Slug: wallet/contact
- * Categories: contact
+ * Categories: contact.
  */
 ?>
 

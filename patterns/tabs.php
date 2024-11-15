@@ -2,7 +2,7 @@
 /**
  * Title: Tabs
  * Slug: wallet/tabs
- * Categories: banner
+ * Categories: banner.
  */
 ?>
 <section class="homepage_tab position-relative">

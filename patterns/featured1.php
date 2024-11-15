@@ -2,7 +2,7 @@
 /**
  * Title: Banner text left image-video right
  * Slug: wallet/featured1
- * Categories: banner
+ * Categories: banner.
  */
 ?>
 <section class="section">

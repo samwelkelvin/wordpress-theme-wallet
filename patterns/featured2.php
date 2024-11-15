@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Banner image-video left text right 
+ * Title: Banner image-video left text right
  * Slug: wallet/featured2
- * Categories: banner
+ * Categories: banner.
  */
 ?>
 <section class="section">
