@@ -1,9 +1,9 @@
-node_modules
+node_modules/
 tools/php-cs-fixer/vendor
 .git
 vendor
 psalm
-#lint-staged.config.js
+lint-staged.config.js
 #.php-cs-fixer.php
 .php-cs-fixer_1.php
 .php-cs-fixer_2.php
